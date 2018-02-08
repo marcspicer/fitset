@@ -1,22 +1,33 @@
 <%- contentFor('mainNav') %>
 <ul class="nav nav-tabs fitset-top-nav">
-    <li class="active"><a href="#Yoga" data-toggle="tab"><i class="xsicon icon-massage"></i><span>Yoga</span></a></li>
-    <li><a href="#Pilates" data-toggle="tab"><i class="xsicon icon-massage"></i><span>Pilates</span></a></li>
+  <% 
+  a = 0;
+  for(activity of activites) { %>
+    <li 
+    <% if(a == 1) { %>
+      class="active"
+    <% } %> ><a href="javascript:void(0)" data-id="<%= activity._id %>" data-toggle="tab"><i class="xsicon icon-massage"></i><span>
+      <%= activity.name %>
+    </span></a></li>
+  <%
+  a++ 
+  } %>
+    <!-- <li><a href="#Pilates" data-toggle="tab"><i class="xsicon icon-massage"></i><span>Pilates</span></a></li>
     <li><a href="#Zumba" data-toggle="tab"><i class="xsicon icon-massage"></i><span>Zumba</span></a></li>
     <li><a href="#Swimming" data-toggle="tab"><i class="xsicon icon-massage"></i><span>Swimming</span></a></li>
     <li><a href="#nail" data-toggle="tab"><i class="xsicon icon-massage"></i><span>Sculpt</span></a></li>
-    <li><a href="#Rowing" data-toggle="tab"><i class="xsicon icon-massage"></i><span>Rowing</span></a></li>
+    <li><a href="#Rowing" data-toggle="tab"><i class="xsicon icon-massage"></i><span>Rowing</span></a></li> -->
 </ul>
 <%- contentFor('body') %>
 <div class="tab-pane active" id="Yoga">
   <div class="tabbable">
     <ul class="nav nav-tabs fitset-side-nav">
-      <li class="active"><a href="#mens_Zumba" data-toggle="tab">Men's Yoga</a></li>
-      <li><a href="#women_Yoga" data-toggle="tab">Women's Yoga</a></li>
-      <li><a href="#child_Yoga" data-toggle="tab">Children's Yoga</a></li>
-      <li><a href="#teens_Yoga" data-toggle="tab">Teen's Yoga</a></li>
-      <li><a href="#layer_Yoga" data-toggle="tab">Layer Yoga</a></li>
-      <li><a href="#stylish_Yoga" data-toggle="tab">Stylish Yoga</a></li>
+      <% for(activity_class of classes) { %>
+      <li class="active"><a href="#mens_Zumba" data-toggle="tab">
+        <%= activity_class.name %>
+      </a></li>
+      <% } %>
+      
     </ul>
     <div class="tab-content">
       <div class="tab-pane fitset-tab-content active" id="mens_Yoga">
@@ -140,3 +151,6 @@
     <!-- .tab-content END -->
   </div>
 </div>
+
+<%- contentFor('js') %>
+<script type="text/javascript" src="/js/api.js"></script>

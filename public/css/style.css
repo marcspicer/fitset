@@ -2406,11 +2406,15 @@ Section
 .fitset-tab .fitset-top-nav {
 	border: 0;
 	padding: 0 0 50px;
-	display: flex;
+	/* display: flex; */
+	height: 155px;
+	overflow-y: scroll;
+	margin-bottom: 70px;
 }
 .fitset-tab .nav.nav-tabs.fitset-top-nav li {
-	flex: 1;
-	margin: 0 30px 0 0;
+	/* flex: 1; */
+	width: 150px;
+	margin: 0 10px 10px 0;
 }
 .fitset-tab .nav.nav-tabs.fitset-top-nav li:last-child {
 	margin: 0;
@@ -2514,6 +2518,9 @@ Section
 	display: block;
 	width: calc(25% - 15px);
 	margin: 0 30px 0 0;
+	height: 450px;
+    overflow-y: scroll;
+    overflow-x: hidden;
 }
 .fitset-tab .fitset-side-nav li {
 	display: block;
