@@ -1,0 +1,26 @@
+{
+  "name": "fitset",
+  "version": "1.0.0",
+  "description": "A sample node js application",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marcspicer/fitset.git"
+  },
+  "author": "Marc Spicer",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/marcspicer/fitset/issues"
+  },
+  "homepage": "https://github.com/marcspicer/fitset#readme",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "ejs": "^2.5.7",
+    "express": "^4.16.2",
+    "express-ejs-layouts": "^2.3.1",
+    "mongoose": "^5.0.6"
+  }
+}

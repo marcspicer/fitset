@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Fitset</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- fonts-->
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700" rel="stylesheet">
+
+  <!-- Owl Stylesheets -->
+  <link rel="stylesheet" href="/css/owl.carousel.min.css">
+
+  <!-- custom CSS -->
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/leaflet.css" />
+
+</head>
+
+<body>
+  <div class="wrapper">
+    <div class="tab-outer">
+      <div class="container">
+        <%- defineContent('mainNav') %>
+       
+        <div class="tab-content">
+          <%- defineContent('body') %>
+          
+          <div class="clear"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- jQuery first, then Tether, then Bootstrap JS. -->
+  <script src="/js/jquery-3.2.1.min.js"></script>
+  <script src="/js/leaflet.js"></script>  
+  <script src="/js/owl.carousel.js"></script>  
+
+  <%- defineContent('js') %>
+</body>
+
+</html>

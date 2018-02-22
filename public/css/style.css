@@ -1,0 +1,51 @@
+/*--====================== Reset ============================--*/
+* { margin: 0; padding: 0; border: 0; }
+a img { border: none; }
+:focus { outline: 0; }
+a:focus { outline: none; }
+/*--====================== Global ============================--*/
+body { font-family: 'Montserrat', sans-serif; }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 { padding: 0; margin: 0; }
+ul { list-style: none; padding: 0; margin: 0; }
+ul li,
+ul ol { list-style: none; padding: 0; margin: 0; }
+.container { max-width: 1140px; width: 100%; margin: 0 auto; }
+.clear { clear: both; }
+
+/*---css---*/
+.tab-outer { padding: 100PX 0; }
+.owl-carousel { padding-bottom: 50px; }
+.tab-outer .item { text-align: center; }
+.tab-outer .item img { margin: 0 auto 20px; }
+.tab-outer .item a { background: #f5f5f5; padding: 40px 35px; display: block; text-decoration: none; position: relative; }
+.tab-outer .item span { display: block; font-size: 14px; color: #999999; font-weight: 500; text-transform: uppercase; }
+.tab-outer .item a:hover { background: #ec5598; transition: all ease 0.5s; }
+.tab-outer .item.active a { background: #ec5598; transition: all ease 0.5s; }
+.tab-outer .item a:hover span { color: #fff; transition: all ease 0.5s; }
+.tab-outer .item.active a span { color: #fff; transition: all ease 0.5s; }
+.owl-nav div { position: absolute; top: 32%; font-size: 0; width: 10px; line-height: 20px; text-align: center; }
+.owl-nav .owl-prev { left: 0; background: url(../images/prev-img.png) 5px no-repeat #db6096; padding: 5px; }
+.owl-nav .owl-next { right: 0; background: url(../images/next-img.png) 5px no-repeat #db6096; padding: 5px; }
+.tab-menu { float: left; padding: 30px 20px 30px 0; -webkit-box-shadow: 3px 4px 15px 5px rgba(232,232,232,1); -moz-box-shadow: 3px 4px 15px 5px rgba(232,232,232,1); box-shadow: 3px 4px 15px 5px rgba(232,232,232,1); width: calc(25% - 15px); margin: 0 30px 0 0; height: 300px; overflow: auto; }
+.tab-menu::-webkit-scrollbar-track { border-radius: 10px; background-color: #F5F5F5; }
+.tab-menu::-webkit-scrollbar { width: 10px; background-color: #F5F5F5; }
+.tab-menu::-webkit-scrollbar-thumb { border-radius: 10px; background-color: #db6096; }
+.tab-menu ul li { margin: 16px 0 0 30px; }
+.tab-menu ul li a { font-size: 14px; color: #797979; text-decoration: none; display: block; text-transform: capitalize; position: relative; -webkit-transition: all .4s ease; transition: all .4s ease; padding: 0 0 16px; border-bottom: 1px dashed #C3C3C3; font-weight: 500; }
+.tab-menu ul li a:hover { color: #db6096; }
+.tab-menu ul li.active a { color: #db6096; }
+.tab-menu ul li:last-child a { border-bottom: none; }
+.tab-menu ul li a:hover { color: #db6096; }
+.tab-menu ul li a::before { position: absolute; content: ""; left: -30px; top: 50%; height: 0; width: 4px; background-color: var(--color-pink); -webkit-transform: translateY(-60%); transform: translateY(-60%); -webkit-transition: all .4s ease; transition: all .4s ease; }
+.tab-menu ul li.active a::before { position: absolute; content: ""; left: -30px; top: 50%; height: 100%; width: 4px; background: #db6096; -webkit-transform: translateY(-60%); transform: translateY(-60%); -webkit-transition: all .4s ease; transition: all .4s ease; }
+.tab-menu ul li a:hover::before { height: 100%; background: #db6096; }
+.tab-detail { width: calc(73% - 15px); -webkit-box-shadow: 3px 4px 15px 5px rgba(232,232,232,1); -moz-box-shadow: 3px 4px 15px 5px rgba(232,232,232,1); box-shadow: 3px 4px 15px 5px rgba(232,232,232,1); float: right; }
+.tab-detail img { width: 100%; }
+.loading-image { margin-left: 45%; }
+
+#mapid { height: 360px; }
