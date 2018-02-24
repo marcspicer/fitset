@@ -54,7 +54,7 @@ $(document).ready(function(){
             if(res.length > 0) {
                 var activities = '';
                 $.each(res, function(i, activity){
-                    activities += `<div class="item" data-id="${activity.id}">
+                    activities += `<div class="item" data-id="${activity._id}">
                     <a href="javascript:void(0)">
                       <img src="/images/yoga-img.png" alt="" title="">
                       <span>${activity.name}</span>
@@ -65,7 +65,7 @@ $(document).ready(function(){
                 $("#api-activities .item:first").addClass('active');
 
                 applyCarousel();
-                getCategoryLocations(res[0].id);
+                getCategoryLocations(res[0]._id);
             }
         }
     });
