@@ -13,7 +13,7 @@ module.exports = router;
 
 // route for our homepage
 router.get('/get-activities', function(req, res) {
-  Activity.find({ status: 'yes' }, function(err, results){
+  Activity.find({ status: true }, function(err, results){
     if(err){
         res.status(400).json(err);
     }  
@@ -25,7 +25,7 @@ router.get('/get-activities', function(req, res) {
 router.get('/get-locations/:category_id', function(req, res) {
     const category_id = req.params.category_id;
     var search = [];
-    search.push(parseInt(category_id)); 
+    search.push(category_id); 
     Location.find({ categories: {$in: search} }, function(err, results){
       if(err){
           res.status(400).json(err);

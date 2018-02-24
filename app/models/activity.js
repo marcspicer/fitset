@@ -3,9 +3,9 @@ var Schema       = mongoose.Schema;
 
 var ActivitySchema   = new Schema({
     description: String,
-    id: Number,
+    _id: String,
     name: String,
-    status: String
-});
+    status: Boolean
+},{ collection: 'fitset_activities' });
 
 module.exports = mongoose.model('Activity', ActivitySchema);
